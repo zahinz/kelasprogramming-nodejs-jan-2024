@@ -1,11 +1,45 @@
 const http = require("http");
 
 const server = http.createServer(function (req, res) {
-  // using res object to send back response to the client
+  const url = req.url.toLowerCase();
+  console.log(url);
+  // we can handle different urls to send different responses
 
+  // using res object to send back response to the client
   // send html
-  res.writeHead(200, { "Content-Type": "text/html" });
-  res.write(`<div style="background-color:red"><h1>Hello World</h1></div>`);
+  if (url === "/") {
+    res.writeHead(200, { "Content-Type": "text/html" });
+    res.write(`<div style="background-color:red"><h1>Home</h1></div>`);
+    res.end();
+    return;
+  }
+
+  if (url === "/about") {
+    res.writeHead(200, { "Content-Type": "text/html" });
+    res.write(`<div style="background-color:blue"><h1>About</h1></div>`);
+    res.end();
+    return;
+  }
+
+  if (url === "/youtube") {
+    res.writeHead(301, { Location: "https://www.youtube.com" });
+    res.end();
+    return;
+  }
+
+  if (url === "/data") {
+    res.writeHead(200, { "Content-Type": "application/json" });
+    res.write(
+      JSON.stringify({ name: "Zahin", age: 30, location: "Cyberjaya" })
+    );
+    res.end();
+    return;
+  }
+
+  res.writeHead(404, { "Content-Type": "text/html" });
+  res.write(
+    `<div style="background-color:yellow"><h1>Page not found</h1></div>`
+  );
 
   // send json
   // res.writeHead(200, { "Content-Type": "application/json" });
