@@ -57,7 +57,9 @@ const server = http.createServer(function (req, res) {
 // common port numbers: 80 (http), 443 (https), 22 (ssh), 21 (ftp), 25 (smtp),
 // node server listens on port 8888
 // http://localhost:8888 - this is the url to connect to our own server
-server.listen(2323);
+server.listen(8889, function () {
+  console.log("Server is running on port 8889");
+});
 
 // http status codes
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
