@@ -1,0 +1,16 @@
+{
+  "name": "my-first-express-server",
+  "version": "1.0.0",
+  "description": "Exploring node js server by using third party module expressjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch index.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zahinz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.3"
+  }
+}
