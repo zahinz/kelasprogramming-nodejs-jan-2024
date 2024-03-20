@@ -31,7 +31,7 @@ app.get("/bmi-form", function (req, res) {
 app.post("/bmi-result", function (req, res) {
   // const bmi = req.query.bmi;
 
-  // Thank to Azwan for this suggestion
+  // Thanks to Azwan for this suggestion
   // business logic via server
   const data = req.body;
   console.log(data);
