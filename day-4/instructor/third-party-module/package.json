@@ -1,0 +1,15 @@
+{
+  "name": "third-party-module",
+  "version": "1.0.0",
+  "description": "my first learning folder about node js package",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch index.mjs",
+    "start": "node index.mjs"
+  },
+  "author": "zahinz",
+  "license": "ISC",
+  "dependencies": {
+    "random-words": "^2.0.1"
+  }
+}
