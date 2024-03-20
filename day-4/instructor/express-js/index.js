@@ -28,9 +28,19 @@ app.get("/bmi-form", function (req, res) {
   res.status(200).send(bmiForm);
 });
 
-app.get("/bmi-result", function (req, res) {
-  const bmi = req.query.bmi;
+app.post("/bmi-result", function (req, res) {
+  // const bmi = req.query.bmi;
+
+  // Thank to Azwan for this suggestion
+  // business logic via server
+  const data = req.body;
+  console.log(data);
+  const weight = Number(data.weight);
+  const height = Number(data.height);
+  const bmi = (weight / (height * height)).toFixed(2);
   console.log(bmi);
+
+  // serve function
   const bmiResultPath = path.join(__dirname, "pages", "bmi-result.html");
   let bmiResult = fs.readFileSync(bmiResultPath, "utf-8");
   // bmiResult is a string
@@ -46,16 +56,16 @@ app.get("/bmi-result", function (req, res) {
 });
 
 // POST request from BMI form
-app.post("/calculate", function (req, res) {
-  // view the data from the form inputs
-  const data = req.body;
-  console.log(data);
-  const weight = Number(data.weight);
-  const height = Number(data.height);
-  const bmi = (weight / (height * height)).toFixed(2);
-  console.log(bmi);
-  res.redirect("/bmi-result" + "?bmi=" + bmi);
-});
+// app.post("/calculate", function (req, res) {
+//   // view the data from the form inputs
+//   const data = req.body;
+//   console.log(data);
+//   const weight = Number(data.weight);
+//   const height = Number(data.height);
+//   const bmi = (weight / (height * height)).toFixed(2);
+//   console.log(bmi);
+//   res.redirect("/bmi-result" + "?bmi=" + bmi);
+// });
 
 // not found page
 app.use(function (req, res) {
