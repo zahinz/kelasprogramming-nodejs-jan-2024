@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  font-size: 16px;
+  max-width: 1000px;
+  /* center the container */
+  margin: 0 auto;
+  padding: 0;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}

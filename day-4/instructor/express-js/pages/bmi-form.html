@@ -4,18 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BMI calculator</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <form>
+    <form method="POST" action="/calculate">
       <input
         type="number"
         name="height"
         id="height"
+        step="0.01"
         placeholder="Insert your height in m"
       />
       <input
         type="number"
         name="weight"
+        step="0.01"
         id="weight"
         placeholder="Insert your weight in kg"
       />
