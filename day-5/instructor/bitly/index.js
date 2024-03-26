@@ -13,6 +13,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", Home);
+app.post("/shorten", function (req, res) {
+  console.log(req.body);
+  res.send("Shorten");
+});
 app.get("/dashboard", Dashboard);
 
 app.listen(PORT, () => {
