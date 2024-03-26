@@ -1,6 +1,7 @@
 import express from "express";
 import Home from "./controller/home.js";
 import Dashboard from "./controller/dashboard.js";
+import generateShortUrl from "./controller/generateShortUrl.js";
 
 const app = express();
 const PORT = 3000;
@@ -13,10 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", Home);
-app.post("/shorten", function (req, res) {
-  console.log(req.body);
-  res.send("Shorten");
-});
+app.post("/shorten", generateShortUrl);
 app.get("/dashboard", Dashboard);
 
 app.listen(PORT, () => {
