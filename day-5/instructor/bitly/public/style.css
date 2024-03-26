@@ -28,3 +28,27 @@ button {
   border: none;
   cursor: pointer;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+th {
+  background-color: #333;
+  color: #fff;
+}
+
+tr:nth-child(even) {
+  background-color: #f4f4f4;
+}
+
+tr:hover {
+  background-color: #f4f4f4;
+}
