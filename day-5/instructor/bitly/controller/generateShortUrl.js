@@ -2,7 +2,7 @@ import crypto from "crypto";
 import fs from "fs";
 import path from "path";
 
-function generateShortUrl(req, res) {
+function GenerateShortUrl(req, res) {
   // WRITE PSUEDO CODE
   // get the long url from the request body
   // generate a short url - google.com -> localhost:3000/randomString
@@ -39,4 +39,4 @@ function generateShortUrl(req, res) {
   res.send(shortUrl);
 }
 
-export default generateShortUrl;
+export default GenerateShortUrl;
