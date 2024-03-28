@@ -31,3 +31,11 @@ CREATE TABLE urls(
 -- update table by add new column 'active' with data type boolean
 ALTER TABLE urls
 ADD COLUMN active boolean;
+
+-- delete column 'active' from the table
+ALTER TABLE urls
+DROP COLUMN active;
+
+-- delete the table
+-- warning this will delete all data in the table and cannot be undone
+DROP TABLE urls;
