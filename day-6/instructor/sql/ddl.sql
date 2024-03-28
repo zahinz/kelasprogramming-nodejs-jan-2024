@@ -23,11 +23,13 @@ DROP DATABASE "bitly-clone-kp";
 -- this is DDL (Data Definition Language) which is used to define the structure of the database
 CREATE TABLE urls(
     id serial PRIMARY KEY,
-    long_url varchar(255),
-    short_url varchar(255),
-    visit_count integer,
-    created_at timestamp
+    long_url varchar(255) NOT NULL,
+    short_url varchar(255) UNIQUE NOT NULL,
+    visit_count integer DEFAULT 0 NOT NULL,
+    created_at timestamp DEFAULT NOW() NOT NULL
 )
+-- UNIQUE is a constraint that enforces the uniqueness of the column
+-- email, phone_number, username, and nric are common examples of UNIQUE columns
 
 -- update table by add new column 'active' with data type boolean
 ALTER TABLE urls
