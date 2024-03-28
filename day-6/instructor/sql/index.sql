@@ -19,10 +19,15 @@ DROP DATABASE "bitly-clone-kp";
 -- text is a variable-length string data type that can store an unlimited number of characters
 -- timestamp is a data type that stores the date and time
 -- timestamp vs date 
+-- this is DDL (Data Definition Language) which is used to define the structure of the database
 CREATE TABLE urls(
     id serial PRIMARY KEY,
     long_url varchar(255),
     short_url varchar(255),
-    visit_count integer
+    visit_count integer,
     created_at timestamp
 )
+
+-- update table by add new column 'active' with data type boolean
+ALTER TABLE urls
+ADD COLUMN active boolean;
