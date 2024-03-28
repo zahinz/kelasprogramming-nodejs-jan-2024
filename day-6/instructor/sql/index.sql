@@ -36,6 +36,10 @@ ADD COLUMN active boolean;
 ALTER TABLE urls
 DROP COLUMN active;
 
+-- rename column 'long_url' to 'url' in the table
+ALTER TABLE urls
+RENAME COLUMN long_url TO url;
+
 -- delete the table
 -- warning this will delete all data in the table and cannot be undone
 DROP TABLE urls;
