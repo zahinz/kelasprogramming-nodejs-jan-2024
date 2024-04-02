@@ -12,6 +12,7 @@
   "author": "zahin",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "pg": "^8.11.4"
   }
 }
