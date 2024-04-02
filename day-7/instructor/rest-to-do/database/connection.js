@@ -1,7 +1,9 @@
 import pkg from "pg";
+import createUsersTable from "../model/user.js";
+import createToDosTable from "../model/todo.js";
 const { Pool } = pkg;
 
-const pool = new Pool({
+export const pool = new Pool({
   host: "127.0.0.1",
   user: "zahin",
   password: "",
@@ -22,6 +24,10 @@ export async function testConnection() {
     const name = dbName.rows[0].current_database;
     //   promise is fullfilled
     console.log(`Connected to ${name} at ${time}`);
+
+    // create database tables
+    await createUsersTable();
+    await createToDosTable();
   } catch (error) {
     //   promise is rejected
     console.error(error);
