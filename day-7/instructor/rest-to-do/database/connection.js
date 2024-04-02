@@ -14,7 +14,7 @@ export const pool = new Pool({
   connectionTimeoutMillis: 2000,
 });
 
-export async function testConnection() {
+export async function databaseInit() {
   // try catch block
   try {
     //   promise is pending

@@ -1,7 +1,7 @@
 import express from "express";
 import healthController from "./controller/health.js";
 import notFound from "./controller/not-found.js";
-import { testConnection } from "./database/connection.js";
+import { databaseInit } from "./database/connection.js";
 
 const app = express();
 const PORT = 8787;
@@ -11,10 +11,11 @@ const PORT = 8787;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// database connection
-testConnection();
+// database connection and execute DDL queries to create tables
+databaseInit();
 
 // GET and POST health routes
+// all DML operations will be done in controller
 app.get("/", healthController.get);
 app.post("/", healthController.post);
 
