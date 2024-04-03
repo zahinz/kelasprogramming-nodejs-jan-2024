@@ -3,11 +3,14 @@ import createUsersTable from "../model/user.js";
 import createToDosTable from "../model/todo.js";
 const { Pool } = pkg;
 
+// environment variable - development, production
+// value for host, user, password, database it should be different
+// environment variable - process.env
 export const pool = new Pool({
-  host: "127.0.0.1",
-  user: "zahin",
-  password: "",
-  database: "to-do-app-april-2024",
+  host: process.env.PGHOST,
+  user: process.env.PGUSER,
+  password: process.env.PGPASSWORD,
+  database: process.env.PGDATABASE,
   //
   max: 20,
   idleTimeoutMillis: 30000,

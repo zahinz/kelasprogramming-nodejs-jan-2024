@@ -5,8 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "node --watch index.js",
-    "start": "node index.js",
+    "dev": "PGHOST='localhost' PGUSER=zahin'' PGPASSWORD='' PGDATABASE='to-do-app-april-2024' node --watch index.js",
+    "start": "PGHOST='database.aws.com' PGUSER='adminaws' PGPASSWORD='VSAyw293dbi2' PGDATABASE='to-do-app-aws' node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "zahin",
