@@ -37,7 +37,7 @@ app.delete("/users/:id", deleteUser);
 app.post("/register", createUser);
 app.post("/login", createToken);
 
-// route to handle todos
+// route to handle todos and authenticated routes
 app.get("/todos", isAuth, listAllTodos);
 app.post("/todos", isAuth, createTodo);
 
