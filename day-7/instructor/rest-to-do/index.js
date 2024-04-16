@@ -25,11 +25,12 @@ databaseInit();
 // all DML operations will be done in controller
 app.get("/", healthController.get);
 app.post("/", healthController.post);
-app.post("/users", createUser);
 app.get("/users", readAllUsers);
 app.get("/users/:id", readUserById);
 app.put("/users/:id", updateUser);
 app.delete("/users/:id", deleteUser);
+
+app.post("/register", createUser);
 
 // not found (404) route
 app.use(notFound);

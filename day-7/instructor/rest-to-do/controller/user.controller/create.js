@@ -1,4 +1,5 @@
 import { pool } from "../../database/connection.js";
+import bcrypt from "bcrypt";
 
 // $ is a placeholder for a dynamic value
 const query = `
@@ -31,9 +32,19 @@ async function createUser(req, res) {
 
     //   check if the user already exists
     //   PLEASE EXPLORE THE SQL SYNTAX
+    // hash the password
+    // For legacy systems using bcrypt, use a work factor of 10 or more and with a password limit of 72 bytes.
+    // https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html
+    const salt = bcrypt.genSaltSync(10);
+    const hashedPassword = bcrypt.hashSync(password, salt);
 
     //   pool.query(sqlSyntax, [dynamicValue])
-    const dbRes = await pool.query(query, [username, password, email, isAdmin]);
+    const dbRes = await pool.query(query, [
+      username,
+      hashedPassword,
+      email,
+      isAdmin,
+    ]);
     console.log(dbRes);
     res.status(201).json({
       message: "User is created",
