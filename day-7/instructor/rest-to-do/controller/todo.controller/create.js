@@ -9,7 +9,7 @@ const createTodo = async (req, res) => {
 
     //   payload request body from client
     const text = req.body.text;
-    const userId = req.body.userId;
+    const userId = req.userId;
 
     //   validate the request body is not empty
     if (!text || !userId) {
