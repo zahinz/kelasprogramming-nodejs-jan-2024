@@ -13,6 +13,7 @@ const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, "uploads");
   },
+  // modify the filename of the uploaded file with a unique identifier and the original extension
   filename: function (req, file, cb) {
     cb(null, uuid + path.extname(file.originalname));
   },
