@@ -1,6 +1,6 @@
 import { pool } from "../database/index.js";
 
-export async function uploadFile(req, res) {
+async function uploadFile(req, res) {
   try {
     // req.file exists because of the upload.single middleware by multer
     const file = req.file;
@@ -28,3 +28,5 @@ export async function uploadFile(req, res) {
     });
   }
 }
+
+export default uploadFile;
