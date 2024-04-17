@@ -11,7 +11,6 @@
   "author": "zahinz",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "pg": "^8.11.5"
   }
