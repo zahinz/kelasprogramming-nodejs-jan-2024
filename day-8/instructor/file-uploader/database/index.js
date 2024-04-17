@@ -1,6 +1,7 @@
 import pkg from "pg";
 // import dotenv from "dotenv" to use .env file
 import "dotenv/config";
+import createFilesTable from "../model/file.js";
 
 const { Pool } = pkg;
 
@@ -21,6 +22,8 @@ export async function databaseInit() {
     const time = dbRes.rows[0].now;
     const name = dbName.rows[0].current_database;
     console.log(`Connected to ${name} at ${time}`);
+    // create files table
+    await createFilesTable();
   } catch (error) {
     console.error(error);
     console.error("Database connection failed");
