@@ -59,3 +59,10 @@ ADMIN
 2. View details of booked slots, including customer information
 
 -------------------
+
+DATABASE DESIGN:
+1. Users (id, email, password, created_at, updated_at) - for admin
+2. Slots (id, date, time, created_at, updated_at, customer_name, customer_email, customer_phone) - for available slots
+
+OMIT
+#. Customers (id, name, email, phone, created_at, updated_at) - for customers -> normalisation for future scalability for now omit this
