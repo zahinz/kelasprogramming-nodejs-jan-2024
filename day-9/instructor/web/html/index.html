@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JomCuci</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>JomCuci</h1>
+      <nav>
+        <a href="admin">
+          <button>Admin?</button>
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="available-slots">
+        <h2>Available Slots</h2>
+        <ul>
+          <li>April 25, 2024 - 9:00 AM</li>
+          <li>April 25, 2024 - 1:00 PM</li>
+          <li>April 26, 2024 - 10:00 AM</li>
+          <li>April 26, 2024 - 2:00 PM</li>
+        </ul>
+      </section>
+
+      <section id="booked-slots">
+        <h2>Booked Slots</h2>
+        <ul>
+          <li>April 24, 2024 - 11:00 AM</li>
+          <li>April 24, 2024 - 3:00 PM</li>
+        </ul>
+      </section>
+
+      <section id="booking-form">
+        <h2>Book a Slot</h2>
+        <form>
+          <label for="slot-select">Select a Slot:</label>
+          <select id="slot-select" name="slot">
+            <option value="">Choose a slot</option>
+            <option value="April 25, 2024 - 9:00 AM">
+              April 25, 2024 - 9:00 AM
+            </option>
+            <option value="April 25, 2024 - 1:00 PM">
+              April 25, 2024 - 1:00 PM
+            </option>
+            <option value="April 26, 2024 - 10:00 AM">
+              April 26, 2024 - 10:00 AM
+            </option>
+            <option value="April 26, 2024 - 2:00 PM">
+              April 26, 2024 - 2:00 PM
+            </option>
+          </select>
+          <button type="button" id="book-button">Book Now</button>
+        </form>
+      </section>
+    </main>
+
+    <div id="booking-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Customer Details</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" required />
+
+          <button type="submit">Confirm Booking</button>
+        </form>
+      </div>
+    </div>
+
+    <section id="terms-and-conditions">
+      <h2>Terms and Conditions</h2>
+      <ol>
+        <li>
+          Booking: All bookings are subject to availability and confirmation by
+          JomCuci.
+        </li>
+        <li>
+          Cancellation: Cancellations made less than 24 hours prior to the
+          scheduled appointment may be subject to a cancellation fee.
+        </li>
+        <li>
+          Payment: Payment is due in full at the time of booking. Accepted
+          payment methods include credit card, debit card, and online payment
+          platforms.
+        </li>
+        <li>
+          Service Scope: The cleaning services provided by JomCuci are limited
+          to the agreed-upon areas and tasks. Additional services may incur
+          extra charges.
+        </li>
+        <li>
+          Liability: JomCuci shall not be held liable for any damage, loss, or
+          injury caused by unforeseen circumstances or by the actions of the
+          customer or third parties.
+        </li>
+        <li>
+          Customer Responsibility: The customer is responsible for providing a
+          safe and accessible work environment for our cleaning staff. This
+          includes ensuring that all necessary utilities (water, electricity)
+          are available and that the area is free from hazards.
+        </li>
+        <li>
+          Satisfaction Guarantee: If you are not satisfied with the cleaning
+          service provided, please notify us within 24 hours of the completion
+          of the service. We will work with you to address any issues and ensure
+          your satisfaction.
+        </li>
+        <li>
+          Privacy: JomCuci respects your privacy and will only use your personal
+          information for the purpose of providing cleaning services and
+          communicating with you regarding your booking.
+        </li>
+        <li>
+          Amendments: JomCuci reserves the right to amend these terms and
+          conditions at any time. The most current version will be available on
+          our website.
+        </li>
+        <li>
+          Governing Law: These terms and conditions shall be governed by and
+          construed in accordance with the laws of [Jurisdiction].
+        </li>
+      </ol>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>

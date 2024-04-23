@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Admin Dashboard</h1>
+    </header>
+    <main>
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="slots">Slots</button>
+        <button class="tab-btn" data-tab="bookings">Booked Slots</button>
+      </div>
+      <div class="tab-content">
+        <div class="tab active" id="slots">
+          <h2>Slots</h2>
+          <form id="slot-form">
+            <input
+              type="text"
+              id="slot-date"
+              placeholder="Date (YYYY-MM-DD)"
+              required
+            />
+            <input
+              type="text"
+              id="slot-time"
+              placeholder="Time (HH:MM)"
+              required
+            />
+            <button type="submit">Add Slot</button>
+          </form>
+          <ul id="slot-list"></ul>
+        </div>
+        <div class="tab" id="bookings">
+          <h2>Booked Slots</h2>
+          <ul id="booking-list"></ul>
+        </div>
+      </div>
+    </main>
+    <script src="admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+User Stories for Customer:
+
+1. As a customer, I want to view available slots for cleaning services so that I can choose a convenient date and time for my booking.
+
+2. As a customer, I want to select a specific slot and provide my contact details (name, email, phone) so that I can book a cleaning service.
+
+3. As a customer, I want to receive a confirmation of my booking so that I can be assured that my cleaning service is scheduled.
+
+4. As a customer, I want to be able to cancel or reschedule my booking so that I can make changes if my plans or availability change.
+
+5. As a customer, I want to view the terms and conditions of the cleaning service so that I can understand the policies and requirements before making a booking.
+
+6. As a customer, I want to receive reminders about my upcoming cleaning service so that I can ensure my availability and prepare for the service.
+
+7. As a customer, I want to provide feedback or ratings after the cleaning service so that I can share my experience and help improve the service quality.
+
+-------------------
+
+User Stories for Admin:
+
+1. As an admin, I want to create, update, read, and delete available slots for cleaning services so that I can manage the booking schedule effectively.
+
+2. As an admin, I want to view details of booked slots, including customer information, so that I can plan and allocate resources accordingly.
+
+3. As an admin, I want to have separate sections for slot management and booked slot viewing so that I can easily navigate and perform specific tasks.
+
+4. As an admin, I want to receive notifications when a new booking is made so that I can promptly review and confirm the booking.
+
+5. As an admin, I want to be able to search and filter booked slots based on date, time, or customer name so that I can quickly find specific bookings.
+
+6. As an admin, I want to generate reports and statistics on booking trends and service utilization so that I can make informed decisions and optimize the cleaning service operations.
+
+7. As an admin, I want to manage customer information securely so that I can ensure the privacy and confidentiality of customer data.
+
+8. As an admin, I want to set and update the terms and conditions for the cleaning service so that customers are aware of the policies and requirements.
+
+9. As an admin, I want to assign cleaning staff to booked slots so that I can ensure efficient service delivery and optimal resource allocation.
+
+10. As an admin, I want to communicate with customers regarding their bookings, including sending confirmations, reminders, and follow-up messages so that I can provide excellent customer service.
+
+These user stories provide a clear understanding of the desired functionality and requirements from both the customer and admin perspectives. They help in prioritizing features, guiding the development process, and ensuring that the application meets the needs of all stakeholders involved in the cleaning service booking process.

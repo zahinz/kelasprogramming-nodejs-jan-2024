@@ -1,0 +1,60 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1,
+h2 {
+  margin-bottom: 10px;
+}
+
+.tabs {
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+  border: none;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background-color: #ccc;
+}
+
+.tab-content {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.tab {
+  display: none;
+}
+
+.tab.active {
+  display: block;
+}
+
+form {
+  margin-bottom: 10px;
+}
+
+input {
+  margin-right: 10px;
+  padding: 5px;
+}
+
+button {
+  padding: 5px 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}

@@ -1,0 +1,91 @@
+Software Requirements Specification:
+
+1. Introduction
+   1.1 Purpose
+   The purpose of this document is to outline the software requirements for the Cleaning Business Admin Dashboard application. The dashboard will provide functionality for managing available slots and viewing booked slots with customer details.
+
+   1.2 Scope
+   The scope of this document covers the functional and non-functional requirements of the admin dashboard application.
+
+   1.3 Definitions, Acronyms, and Abbreviations
+   - CRUD: Create, Read, Update, Delete
+   - UI: User Interface
+
+2. Overall Description
+   2.1 Product Perspective
+   The admin dashboard will be a web-based application that interacts with a backend API to manage slots and bookings. It will be accessible through a web browser.
+
+   2.2 Product Features
+   The key features of the admin dashboard include:
+   - Slot management: Create, update, read, and delete available slots.
+   - Booked slot viewing: Display booked slots with customer details.
+   - Tabbed interface: Separate sections for slot management and booked slot viewing.
+
+   2.3 User Classes and Characteristics
+   The primary user of the admin dashboard will be the cleaning business administrator who is responsible for managing slots and monitoring bookings.
+
+3. System Features
+   3.1 Slot Management
+   3.1.1 Create Slot
+   - The admin can create a new available slot by providing a date and time.
+   - The system will validate the input format and add the slot to the available slots list.
+
+   3.1.2 Update Slot
+   - The admin can update the date and time of an existing available slot.
+   - The system will validate the input format and update the slot details.
+
+   3.1.3 Read Slots
+   - The system will display a list of available slots with their corresponding date and time.
+
+   3.1.4 Delete Slot
+   - The admin can delete an available slot from the list.
+   - The system will remove the slot from the available slots list.
+
+   3.2 Booked Slot Viewing
+   3.2.1 View Booked Slots
+   - The system will display a list of booked slots with customer details, including name, email, and phone number.
+   - The booked slots will be retrieved from the backend API.
+
+   3.3 Tabbed Interface
+   3.3.1 Slot Management Tab
+   - The slot management section will be displayed in a separate tab.
+   - The tab will contain the form to create/update slots and the list of available slots.
+
+   3.3.2 Booked Slot Viewing Tab
+   - The booked slot viewing section will be displayed in a separate tab.
+   - The tab will contain the list of booked slots with customer details.
+
+4. External Interface Requirements
+   4.1 User Interfaces
+   - The admin dashboard will have a web-based user interface.
+   - The UI will be intuitive and easy to navigate, with clearly labeled tabs for slot management and booked slot viewing.
+
+   4.2 Hardware Interfaces
+   - The admin dashboard will be accessible through a web browser on any device with internet connectivity.
+
+   4.3 Software Interfaces
+   - The admin dashboard will interact with a backend API to retrieve and manipulate data.
+   - The API endpoints and data format will be specified separately.
+
+5. Non-functional Requirements
+   5.1 Performance
+   - The admin dashboard should load and respond quickly to user interactions.
+   - The system should be able to handle multiple concurrent users without significant performance degradation.
+
+   5.2 Security
+   - Access to the admin dashboard should be restricted to authorized administrators only.
+   - Appropriate authentication and authorization mechanisms should be implemented.
+
+   5.3 Usability
+   - The admin dashboard should have a user-friendly interface with clear instructions and feedback.
+   - The UI should be responsive and adapt to different screen sizes and devices.
+
+6. Other Requirements
+   6.1 Browser Compatibility
+   - The admin dashboard should be compatible with modern web browsers such as Chrome, Firefox, Safari, and Edge.
+
+   6.2 Documentation
+   - User documentation should be provided, including a user manual and troubleshooting guide.
+   - Technical documentation should be maintained, covering the system architecture, API specifications, and deployment instructions.
+
+This software requirements specification provides a detailed outline of the functionality and requirements for the Cleaning Business Admin Dashboard application. It serves as a guide for the development team to ensure that the application meets the specified criteria and fulfills the needs of the cleaning business administrator.
