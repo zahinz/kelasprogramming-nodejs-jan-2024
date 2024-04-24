@@ -44,6 +44,8 @@ User Stories for Admin:
 
 10. As an admin, I want to communicate with customers regarding their bookings, including sending confirmations, reminders, and follow-up messages so that I can provide excellent customer service. - FE + BE -> future feature / KIV
 
+11. As an admin, I want to handle whether the slot can be created in a condition if a slot with similar date and time already exists. - BE **
+
 These user stories provide a clear understanding of the desired functionality and requirements from both the customer and admin perspectives. They help in prioritizing features, guiding the development process, and ensuring that the application meets the needs of all stakeholders involved in the cleaning service booking process. 
 
 -------------------
@@ -72,8 +74,8 @@ OMIT
 API
 
 Public API - for customer facing features
-1. GET /slots - get all available slots and booked slots
-2. POST /slots/:id/book - book a specific slot
+1. GET /slots - get all available slots and booked slots ✅
+2. POST /slots/:id/book - book a specific slot ✅
 3. POST /login - login for admin ✅
 4. POST /register - register for admin ✅
 
