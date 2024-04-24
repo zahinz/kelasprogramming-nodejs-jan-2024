@@ -78,9 +78,9 @@ Public API - for customer facing features
 4. POST /register - register for admin ✅
 
 Private API - for admin features (authentication/token required)
-1. GET /admin/slots - get all available slots
-2. POST /admin/slots - create a new slot
-3. DELETE /admin/slots/:id - delete a specific slot
+1. GET /admin/slots - get all available slots ✅ - LIST ALL | VIEW ONE WITH ID
+2. POST /admin/slots - create a new slot ✅
+3. DELETE /admin/slots/:id - delete a specific slot ✅ 
 4. GET /admin/bookings - get all booked slots
 5. GET /admin/bookings/:id - get details of a specific booked slot
 6. PUT /admin/bookings/:id - update details of a specific booked slot / reschedule or cancel booking
