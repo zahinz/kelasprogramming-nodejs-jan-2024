@@ -1,6 +1,9 @@
 import { Router } from "express";
+import isAuth from "../middlewares/isAuth.js";
 
 const privateRouter = Router();
+
+privateRouter.use(isAuth);
 
 privateRouter.get("/helloworld", (req, res) => {
   res.send("<h1>Hello Admin!</h1>");

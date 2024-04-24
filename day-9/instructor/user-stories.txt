@@ -60,9 +60,9 @@ ADMIN
 
 -------------------
 
-DATABASE DESIGN:
-1. Users (id, email, password, created_at, updated_at) - for admin
-2. Slots (id, date, time, created_at, updated_at, customer_name, customer_email, customer_phone) - for available slots
+DATABASE DESIGN: 
+1. Users (id, email, password, created_at, updated_at) - for admin ✅
+2. Slots (id, date, time, created_at, updated_at, customer_name, customer_email, customer_phone) - for available slots ✅
 
 OMIT
 #. Customers (id, name, email, phone, created_at, updated_at) - for customers -> normalisation for future scalability for now omit this
@@ -74,8 +74,8 @@ API
 Public API - for customer facing features
 1. GET /slots - get all available slots and booked slots
 2. POST /slots/:id/book - book a specific slot
-3. POST /login - login for admin
-4. POST /register - register for admin
+3. POST /login - login for admin ✅
+4. POST /register - register for admin ✅
 
 Private API - for admin features (authentication/token required)
 1. GET /admin/slots - get all available slots
