@@ -1,4 +1,5 @@
 import { pool } from "../../database/index.js";
+import { validateEmail } from "../../utils/helper.js";
 
 const checkSlotsBooked = `
   SELECT * FROM slots
@@ -18,6 +19,17 @@ const bookASlotForPublic = async (req, res) => {
     const customerPhone = req.body.customer_phone;
     const customerEmail = req.body.customer_email;
     const slotId = req.params.id;
+
+    if (!customerName || !customerPhone || !customerEmail) {
+      return res
+        .status(400)
+        .json({ message: "Customer name, phone, and email are required" });
+    }
+
+    const validEmail = validateEmail(customerEmail);
+    if (!validEmail) {
+      return res.status(400).json({ message: "Invalid email" });
+    }
 
     const checkRes = await pool.query(checkSlotsBooked, [slotId]);
     if (checkRes.rows.length) {
