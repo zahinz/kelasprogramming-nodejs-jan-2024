@@ -1,4 +1,5 @@
 import { pool } from "../../database/index.js";
+import sendEmail from "../../service/email.js";
 import { validateEmail } from "../../utils/helper.js";
 
 const checkSlotsBooked = `
@@ -42,6 +43,14 @@ const bookASlotForPublic = async (req, res) => {
       customerEmail,
       slotId,
     ]);
+
+    const emailData = {
+      to: customerEmail,
+      subject: "Slot booked",
+      html: `<p>Hi ${customerName}, your slot has been booked</p><p>Slot details: ${slots.rows[0].date} ${slots.rows[0].time}</p>`,
+      text: `Hi ${customerName}, your slot has been booked`,
+    };
+    await sendEmail(emailData);
     return res.json({ data: slots.rows });
   } catch (error) {
     console.error(error);

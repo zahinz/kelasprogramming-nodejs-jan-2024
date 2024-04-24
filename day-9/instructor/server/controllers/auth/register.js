@@ -1,6 +1,7 @@
 import bcrypt from "bcrypt";
 import { pool } from "../../database/index.js";
 import { validateEmail } from "../../utils/helper.js";
+import sendEmail from "../../service/email.js";
 
 const insertNewUser = `
 INSERT INTO users (password, email)
@@ -44,7 +45,12 @@ const register = async (req, res) => {
 
     //   pool.query(sqlSyntax, [dynamicValue])
     const dbRes = await pool.query(insertNewUser, [hashedPassword, email]);
-    console.log(dbRes);
+    await sendEmail({
+      to: email,
+      subject: "User registered",
+      html: "<p>Thank you for registering. This is your varification code - 12345jkswk</p>",
+      text: "You have successfully registered",
+    });
     res.status(201).json({
       message: "User is created",
     });
